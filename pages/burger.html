@@ -10,23 +10,21 @@
 </head>
 <body>
     <header>
-        <nav class="topnav">
-            <a href="burger.html"><img src="../images/logo-no-background square.png" alt="logo"></a>
-            <div class="navmenu-container">
-                <div class="navlist-container" tabindex="0">
-                    <ul class="nav-menu" id="navmenu">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#design">Design</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul> 
-                    <a id="burger" href="#navmenu" title="menu" class="nav-burger">
-                        <i class="fa-solid fa-bars"></i> 
-                    </a>   
-                </div>
-                <a href="#!" title="close menu" class="nav-burgerclose"><i class="fa-solid fa-bars-times"></i></a>
-            </div>
-        </nav>     
+        <div class="topnav" id="nav-bar">
+            <nav>
+                <ul>
+                    <a href="#burger.html" class="logo"><img src="../images/logo-no-background square.png" alt="logo"></a>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#design">Design</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                
+                    <a href="javascript:void(0);" class="icon" onclick="navburger()">
+                        <i class="fa-solid fa-bars"></i>   
+                    </a>
+                </ul>    
+            </nav>
+        </div>
     </header>
      <!--<div class="subject">
        <h1>Welcome to Kente.Pa</h1>
@@ -52,17 +50,17 @@
         <img src="../images/Akpene.png" alt="Akpene kente">
 
         <img src="../images/Dede.png" alt="Dede kente">
-    </div>
+    </div>-->
 
         <script>
-            function burgerMenu() {
-                let burger = document.getElementById("nav-bar");
-                if (burger.className === "nav-menu") {
-                burger.className += " responsive";
+            function navburger() {
+                var x = document.getElementById("nav-bar");
+                if (x.className === "topnav") {
+                x.className += " responsive";
                 } else {
-                burger.className = "nav-menu";
+                x.className = "topnav";
                 }
             }
-        </script>-->
+        </script>
 </body>
 </html>

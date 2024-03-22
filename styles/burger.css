@@ -2,6 +2,7 @@
 body {
     margin: 0;
     height: 100vh;
+    width: 100%;
 }
 
 body {
@@ -14,42 +15,56 @@ body {
     align-items: center;*/
 }
 
-.topnav {
-    display: flex;
+   
     /*margin-left: 10px;
     justify-content: space-between;
     align-items: center;*/
-    position: fixed;
+    /*position: fixed;
     /*width: 100%;
-    z-index: 5;*/
+    z-index: 5;
     padding: 1rem;
 }
+/*
 .navmenu-container {
     position: relative;
 }
 
 .nav-burger {
-    color: inherit;
-    min-width: 35px;
-    min-height: 35px;
+    color: #a95111;
     transition: opacity 80ms linear;
-    /*hide the closed icon on large screen*/
+    /*hide the closed icon on large screen
     display: none;
+    opacity: 0;   
+}
+/*
+.nav-burgerclose {
+    color: #a95111;
+    position: absolute;
+    top: 0;
+    transition: opacity 150ms linear;
+    /*hide the closed icon */
+    /*display: none;
     opacity: 0;
-     /*pushing it behind the burger icon so that the icon can be clicked */
+    z-index: -1; /* pushing it behind the burger icon so that the icon can be clicked */
 }
-.nav-menu {
-    display: flex;    
+.topnav {
+    
+}
+.logo {
+    margin-left: -2rem;
+    margin-top: -1rem;
 }
 
-.nav-menu li {
-    display: flex;
+.topnav li {
+    display: inline-block;
     list-style: none;
-    padding: 1rem;
-    margin-top: 6px;
+    padding: 1.5rem;
+    margin-top: -3px;
 }
 
-.nav-menu a {
+.topnav a {
+    display: block;
+    float: left;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
@@ -59,20 +74,85 @@ body {
     letter-spacing: -0.346px;
     color: #a95111;
 }
-.nav-menu a:hover {
+.topnav a:hover {
     text-decoration: underline;
     color: rgb(7, 54, 244);
 }
+.topnav .icon {
+    display: none;
+}
 
 @media screen and (max-width: 600px) {
-    .nav-menu a {display: none;}
-    .nav-menu a.icon {
-      float: right;
-      display: block;
-    }
+    /* making the burger icon visible on smaller screen sizes*/
+    .topnav a:not(.logo) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
   }
-  
-  @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive li {
+        display: block;
+        padding: 0.5rem;
+    }
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    margin-left: -2rem;
+    }
+}
+
+
+    .nav-menu {  
+        /*move menu links off smaller screen
+        display: none;
+        position: fixed;
+        top: -1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;    
+    }
+    .nav-menu li {
+        margin-right: 0;
+        padding: 0.5rem 1.5rem;
+    }
+    .nav-menu a:hover,
+    .nav-menu a:focus {
+        opacity: 0.8;
+        color: #121212;
+    }
+
+    .nav-listcontainer:focus .nav-menu,
+    .nav-listcontainer:focus-within .nav-menu {
+        position: absolute;
+        visibility: visible;
+        opacity: 1;
+        top: 2rem;
+        right: 1.5rem;
+    }
+    .nav-listcontainer:focus .nav-burger,
+    .nav-listcontainer:focus-within .nav-burger {
+    opacity: 0;
+    z-index: -1;
+    }
+    .nav-listcontainer:focus + .nav-burgerclose,
+    .nav-listcontainer:focus-within + .nav-burgerclose {
+      display: flex;
+      opacity: 1;
+      z-index: 1;
+    }*/
+
+  /*@media screen and (max-width: 600px) {
     .nav-menu.responsive {position: relative;}
     .nav-menu.responsive .icon {
       position: absolute;
