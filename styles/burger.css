@@ -16,7 +16,27 @@ body {
 
 .topnav {
     display: flex;
-    margin-left: 10px;
+    /*margin-left: 10px;
+    justify-content: space-between;
+    align-items: center;*/
+    position: fixed;
+    /*width: 100%;
+    z-index: 5;*/
+    padding: 1rem;
+}
+.navmenu-container {
+    position: relative;
+}
+
+.nav-burger {
+    color: inherit;
+    min-width: 35px;
+    min-height: 35px;
+    transition: opacity 80ms linear;
+    /*hide the closed icon on large screen*/
+    display: none;
+    opacity: 0;
+     /*pushing it behind the burger icon so that the icon can be clicked */
 }
 
 .nav-menu li {
@@ -25,9 +45,7 @@ body {
     padding: 1rem;
     margin-top: 6px;
 }
-.logo {
-   
-}
+
 .nav-menu a {
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

@@ -10,21 +10,23 @@
 </head>
 <body>
     <header>
-        <div class="topnav">
-                <a href="burger.html" class="logo"><img src="../images/logo-no-background square.png" alt="logo"></a>
+        <nav class="topnav">
+            <a href="burger.html"><img src="../images/logo-no-background square.png" alt="logo"></a>
+            <div class="navmenu-container">
+                <div class="navlist-container" tabindex="0">
+                    <ul class="nav-menu" id="navmenu">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#design">Design</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul> 
+                    <a id="burger" href="#navmenu" title="menu" class="nav-burger">
+                        <i class="fa-solid fa-bars"></i> 
+                    </a>   
+                </div>
+                <a href="#!" title="close menu" class="nav-burgerclose"><i class="fa-solid fa-bars-times"></i></a>
             </div>
-            <div class="nav-menu" id="nav-bar">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#design">Design</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <a class="icon" onclick="burgerMenu()">
-                    <i class="fa-solid fa-bars"></i>   
-                    </a>
-                </ul>
-            </div>
-        </div>
+        </nav>     
     </header>
      <!--<div class="subject">
        <h1>Welcome to Kente.Pa</h1>
