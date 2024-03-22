@@ -38,12 +38,17 @@ body {
     opacity: 0;
      /*pushing it behind the burger icon so that the icon can be clicked */
 }
-
+/*
 .nav-menu li {
     display: inline-block;
     list-style: none;
     padding: 1rem;
     margin-top: 6px;
+}*/
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;  
 }
 
 .nav-menu a {
