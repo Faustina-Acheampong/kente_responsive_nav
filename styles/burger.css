@@ -38,17 +38,15 @@ body {
     opacity: 0;
      /*pushing it behind the burger icon so that the icon can be clicked */
 }
-/*
+.nav-menu {
+    display: flex;    
+}
+
 .nav-menu li {
-    display: inline-block;
+    display: flex;
     list-style: none;
     padding: 1rem;
     margin-top: 6px;
-}*/
-
-.nav-menu {
-    display: flex;
-    flex-wrap: wrap;  
 }
 
 .nav-menu a {
@@ -60,6 +58,10 @@ body {
     line-height: normal;
     letter-spacing: -0.346px;
     color: #a95111;
+}
+.nav-menu a:hover {
+    text-decoration: underline;
+    color: rgb(7, 54, 244);
 }
 
 @media screen and (max-width: 600px) {
