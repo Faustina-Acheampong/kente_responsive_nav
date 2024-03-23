@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="../styles/dropdown.css">
+    <script src="https://kit.fontawesome.com/bd036a696d.js" crossorigin="anonymous"></script>
+    <title>Drop-down Navigation</title>
+</head>
+<body>
+    <header>
+        <div class="topnav" id="nav-bar">
+            <nav>
+                <ul>
+                    <a href="#dropdown.html" class="logo"><img src="../images/logo e.png" alt="logo"></a>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Design
+                        <i class="fa-sharp fa-solid fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">Ombre</a>
+                            <a href="#">Pattern</a>
+                            <a href="#">Plain</a>
+                        </div>
+                    </div>
+                    <li><a href="#contact">Contact</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="navdrop()">
+                        <i class="fa-solid fa-bars"></i>   
+                    </a>
+                </ul>    
+            </nav>
+        </div>
+    </header>
+    <main>
+    <h1>Quality and authentic kente fabrics</h1>
+    <div class="wrapper">
+        <img src="../images/Afriyie.png" alt="Afriyie kente">
+
+        <img src="../images/Araba.png" alt="Araba kente">
+
+        <img src="../images/Kukuwaa.png" alt="Kukwaa kente">
+    
+        <img src="../images/Nyarko.png" alt="Nyarko kente">
+    
+        <img src="../images/Aseye.png" alt="Aseye kente">
+    
+        <img src="../images/Serwaa.png" alt="Serwaa kente">
+    
+        <img src="../images/Dzifa.png" alt="Dzifa kente">
+    
+        <img src="../images/Durowaa.png" alt="Durowaa kente">
+    
+        <img src="../images/Akpene.png" alt="Akpene kente">
+
+        <img src="../images/Dede.png" alt="Dede kente">
+    </div>
+        <script>
+            function navdrop() {
+                var x = document.getElementById("nav-bar");
+                if (x.className === "topnav") {
+                x.className += " responsive";
+                } else {
+                x.className = "topnav";
+                }
+            }
+        </script>               
+    </main>     
+</body>
+</html>

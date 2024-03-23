@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <div class="topnav" id="nav-bar">
+        <div class="topnav" id="nav-drop">
             <nav>
                 <ul>
                     <a href="#burger.html" class="logo"><img src="../images/logo e.png" alt="logo"></a>
@@ -19,7 +19,7 @@
                     <li><a href="#design">Design</a></li>
                     <li><a href="#contact">Contact</a></li>
                 
-                    <a href="javascript:void(0);" class="icon" onclick="navburger()">
+                    <a href="javascript:void(0);" class="icon" onclick="navdrop()">
                         <i class="fa-solid fa-bars"></i>   
                     </a>
                 </ul>    
@@ -51,8 +51,8 @@
     </div>
 
         <script>
-            function navburger() {
-                var x = document.getElementById("nav-bar");
+            function navdrop() {
+                var x = document.getElementById("nav-drop");
                 if (x.className === "topnav") {
                 x.className += " responsive";
                 } else {
