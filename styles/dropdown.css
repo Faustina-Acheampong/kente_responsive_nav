@@ -11,7 +11,7 @@ main {
     margin-top: 2rem;
 }
 .logo {
-    margin-left: -2rem;
+    margin-left: 5px;
     padding-right: 1rem;
 }
 
@@ -25,6 +25,7 @@ main {
     display: block;
     float: left;
     flex-wrap: wrap;
+    padding: 14px 16px;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
@@ -35,8 +36,8 @@ main {
     color: #a95111;
 }
 
-.topnav a:hover {
-    text-decoration: underline;
+.topnav li a:hover {
+    background: linear-gradient(to right top, #d4c5dc, #c9cce8, #bbd4ef, #aedcef, #a8e3e8);
     color: rgb(7, 54, 244);
 }
 .topnav .icon {
@@ -44,9 +45,57 @@ main {
 }
 
 .dropdown {
-    float: left;
+    /*float: left;*/
     overflow: hidden;
 }
+
+.dropdown .dropbtn {  
+    border: none;
+    outline: none;
+    color: #a95111;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.346px;
+    margin: 0;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    
+}
+.dropdown-content a {
+    float: none;
+    color: #a95111;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 18px;
+}
+
+.dropdown:hover .dropbtn {
+    background:linear-gradient(to right top, #d4c5dc, #c9cce8, #bbd4ef, #aedcef, #a8e3e8);
+    color: rgb(7, 54, 244);
+}
+ /* 
+.dropdown-content a:hover {
+    background: bisque;
+    color: black;
+}*/
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -57,7 +106,7 @@ h1 {
     letter-spacing: -0.346px;
     text-align: center;
     color: #a95111;
-    padding-top: 2rem;
+    padding-top: 6rem;
 }
 
 .wrapper {
