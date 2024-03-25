@@ -10,26 +10,23 @@
 </head>
 <body>
     <header>
-        <div class="topnav" id="nav-bar">
+        <div class="topnav" id="nav-drop">
             <a href="#dropdown.html" class="logo"><img src="../images/logo e.png" alt="logo"></a>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
+                    <li class="dropdown"><a href="#shop">Shop</a></li>
+                        <ul class="dropdown-content">
+                            <li class="drop-menu"><a href="#">Ombre</a></li>
+                            <li class="drop-menu"><a href="#">Pattern</a></li>
+                            <li class="drop-menu"><a href="#">Plain</a></li>
+                        </ul> 
                     <li><a href="#services">Services</a></li>
-                    <li class="dropdown">
-                        <button class="dropbtn">Design
-                        <i class="fa-sharp fa-solid fa-caret-down"></i></button>
-                        <div class="dropdown-content">
-                            <a href="#">Ombre</a>
-                            <a href="#">Pattern</a>
-                            <a href="#">Plain</a>
-                        </div>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li> 
                     <a href="javascript:void(0);" class="icon" onclick="navdrop()">
                         <i class="fa-solid fa-bars"></i>   
                     </a>
-                </ul>    
+                </ul>      
             </nav>
         </div>
     </header>
@@ -58,7 +55,7 @@
     </div>
         <script>
             function navdrop() {
-                var x = document.getElementById("nav-bar");
+                var x = document.getElementById("nav-drop");
                 if (x.className === "topnav") {
                 x.className += " responsive";
                 } else {
