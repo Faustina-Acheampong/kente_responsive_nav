@@ -8,8 +8,8 @@
     <title>Side Navigation Push</title>
 </head>
 <body>
-    <div class="sidenav" id="sidenav-push">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id="sidenav-push" class="sidenav" >
+        <button class="closebtn" onclick="closeNav()">&times;</button>
         <nav>
             <ul>
                 <a href="#burger.html" class="logo"><img src="../images/logo e.png" alt="logo"></a>
@@ -17,6 +17,45 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+            </ul>    
+        </nav>
+    </div>    
+    <div id="main">
+        <h1>Quality and authentic kente fabrics</h1>
+        <div class="wrapper">
+            <img src="../images/Afriyie.png" alt="Afriyie kente">
+
+            <img src="../images/Araba.png" alt="Araba kente">
+
+            <img src="../images/Kukuwaa.png" alt="Kukwaa kente">
+        
+            <img src="../images/Nyarko.png" alt="Nyarko kente">
+        
+            <img src="../images/Aseye.png" alt="Aseye kente">
+        
+            <img src="../images/Serwaa.png" alt="Serwaa kente">
+        
+            <img src="../images/Dzifa.png" alt="Dzifa kente">
+        
+            <img src="../images/Durowaa.png" alt="Durowaa kente">
     
+            <img src="../images/Akpene.png" alt="Akpene kente">
+
+            <img src="../images/Dede.png" alt="Dede kente">
+        </div>
+        <span class="open-btn" onclick="openNav()">&#9776; open</span>
+    </div> 
+    
+    <script>
+        function openNav() {
+          document.getElementById("sidenav-push").style.width = "200px";
+          document.getElementById("main").style.marginLeft = "200px";
+        }
+    
+        function closeNav() {
+          document.getElementById("sidenav-push").style.width = "0";
+          document.getElementById("main").style.marginLeft = "0";
+        }
+      </script>
 </body>
 </html>
