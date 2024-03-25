@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="../styles/overlay.css">
+    <title>Side Full-Width Overlay Navigation</title>
+</head>
+<body>
+    <div id="sidenav-full" class="overlay" >
+        <a class="closebtn" onclick="closeNav()">&times;</a>
+        <nav>
+            <ul>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>    
+        </nav>
+    </div> 
+    <main>
+        <span style="font-size:28px;cursor:pointer" onclick="openNav()">&#9776; Open</span>
+        <h1>Quality and authentic kente fabrics</h1>
+        <div class="wrapper">
+            <img src="../images/Afriyie.png" alt="Afriyie kente">
+
+            <img src="../images/Araba.png" alt="Araba kente">
+
+            <img src="../images/Kukuwaa.png" alt="Kukwaa kente">
+        
+            <img src="../images/Nyarko.png" alt="Nyarko kente">
+        
+            <img src="../images/Aseye.png" alt="Aseye kente">
+        
+            <img src="../images/Serwaa.png" alt="Serwaa kente">
+        
+            <img src="../images/Dzifa.png" alt="Dzifa kente">
+        
+            <img src="../images/Durowaa.png" alt="Durowaa kente">
+    
+            <img src="../images/Akpene.png" alt="Akpene kente">
+
+            <img src="../images/Dede.png" alt="Dede kente">
+        </div>
+
+        <script>
+            function openNav() {
+              document.getElementById("sidenav-full").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("sidenav-full").style.width = "0";
+            }
+            </script>
+    </main>   
+</body>
+</html>
