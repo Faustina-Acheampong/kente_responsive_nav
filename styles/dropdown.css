@@ -4,93 +4,66 @@ body {
     width: 100%;
     overflow-x: hidden; 
     background-color: white;
-    /*background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
-}
-main {
-    margin-top: 2rem;
-}
-.logo {
-    margin-right: 1.5rem;
-}
-
-.topnav li {
-    display: inline-block;
-    list-style: none; 
-    margin-top: 1rem; 
-}
-
-.topnav a {
-    display: block;
-    float: left;
-    flex-wrap: wrap;
-    padding: 12px 12px;
-    text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.dropmenu li {
+    display: block;
+    list-style: none; 
+    margin-top: 20px;
+    float: left;
+    position: relative;
+    transition-duration: 0.5s;
+}
+
+.dropmenu a {
+    /*display: block;
+    float: left;*/
+    flex-wrap: wrap;
+    padding: 1rem;
+    text-decoration: none;
+    color: rgba(52, 49, 49, 0.986);
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: -0.346px;
-    color: #a95111;
+    letter-spacing: -0.346px;  
 }
 
-.topnav li a:hover {
+.dropmenu li a:hover {
     background: linear-gradient(to right top, #d4c5dc, #c9cce8, #bbd4ef, #aedcef, #a8e3e8);
     color: rgb(7, 54, 244);
 }
 .topnav .icon {
     display: none;
 }
-/*
-.drop-menu {
-    float: left;
-    overflow: hidden;
-    
-}
 
-.drop-menu li { 
-    display: block; 
-    border: none;
-    outline: none;
-    color: #a95111;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: -0.346px;
-    margin: 0;    
-}
-.drop-menu a {
-    display: none;
+.dropmenu li .dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -2.6rem;
+    /*min-width: 5rem;*/
     position: absolute;
-    background: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-    
-}
-.drop-menu a {
-    float: none;
-    color: #a95111;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 16px;
+    transition: all 0.5s ease;
+    top: 1rem;
+    left: 0;
+    display: none;
 }
 
-.dropdown:hover {
-    background:linear-gradient(to right top, #d4c5dc, #c9cce8, #bbd4ef, #aedcef, #a8e3e8);
-    color: rgb(7, 54, 244);
+.dropdown-content a {
+    font-size: 18px; 
 }
 
-  
-.dropdown:hover .dropdown-content {
-    display: block;
-}*/
+/* make the drop links visible on hover*/
+.dropmenu li:hover > ul,
+.dropmenu li:focus-within > ul,
+.dropmenu li .drop-content:hover,
+.dropmenu li .drop-content:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
 
 h1 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -100,8 +73,8 @@ h1 {
     line-height: normal;
     letter-spacing: -0.346px;
     text-align: center;
-    color: #a95111;
-    padding-top: 6rem;
+    color: rgb(52, 49, 49);
+    padding-top: 14rem;
 }
 
 .wrapper {
@@ -110,7 +83,7 @@ h1 {
     margin: auto;
     padding-top: 4rem;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     max-height: 1200px;   
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -140,12 +113,15 @@ h1 {
 
 @media screen and (max-width: 600px) {
     /* making the burger icon visible on smaller screen sizes and other menu links hidden*/
-    .topnav a:not(.logo) {
+    .topnav li:not(:first-child) {
         display: none;
     }
+        
     .topnav a.icon {
     float: right;
     display: block;
+    /*visibility: visible;
+    opacity: 1;*/
    }     
 }
 
@@ -153,7 +129,7 @@ h1 {
     .topnav.responsive {position: relative;}
     .topnav.responsive li {
         display: block;
-        padding: 0.5rem;  
+        padding: 10px; 
     }
     .topnav.responsive a.icon {
       position: absolute;
@@ -161,10 +137,11 @@ h1 {
       top: 0;
     }
     .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-    margin-left: -2rem;
-    font-size: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -2.8rem;
+        text-align: left;
+        font-size: 14px;
+        
     }
 }
