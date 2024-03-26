@@ -4,6 +4,82 @@ body {
     height: 100vh;
     width: 100%;
     overflow-x: hidden; 
-    background-color: white;
+    background: linear-gradient(to right top, #d4c5dc, #c9cce8, #bbd4ef, #aedcef, #a8e3e8);
+    color:black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article {
+    margin: 20px;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #041355fa;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 7rem;
+    text-align: center;
+}
+
+.overlay li {
+    list-style: none;
+}
+.overlay a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #a95111;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.346px;
+    transition: 0.3s;
+}
+
+.overlay a:hover,  .overlay a:focus {
+    color:white;
+}
+
+.open-btn {
+    font-size:22px;
+    cursor: pointer;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 28px;
+    margin-left: 50px;
+    cursor: pointer ;
+  }
+
+h1 {
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.346px;
+    text-align: left;
+    padding-top: 1rem;
+}
+p {
+    width: 70%;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.346px;
+    text-align: left;  
+}
+ 
+@media screen and (max-width: 600px) {
+    h1 {font-size: 20px;}
+    .overlay p {font-size: 14px;}
 }
