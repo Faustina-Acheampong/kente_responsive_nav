@@ -53,6 +53,8 @@ body {
 #main {
     transition: margin-left .5s;
     padding: 35px;
+    /*background-color: rgba(red, green, blue, alpha) (0,0,0,0.2);
+    background-color: white;*/
 }
 
 .open-btn {
